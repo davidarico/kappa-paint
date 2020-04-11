@@ -13,15 +13,14 @@ export default {
     components: {
         KappaFolderView
     },
-    data() {
-        return {
-            folderViewHidden: true
-        }
-    },
+    data: () => ({
+        
+    }),
     methods: {
         showFolder() {
             this.folderViewHidden = false
-        }
+        },
+
     }
 }
 </script>

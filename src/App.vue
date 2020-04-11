@@ -1,16 +1,24 @@
 <template>
   <div id="app">
-    <CanvasSelect />
+    <CanvasSelect v-if="canvasSelectVisible" />
+    <Paint />
   </div>
 </template>
 
 <script>
 import CanvasSelect from './components/CanvasSelect.vue'
+import Paint from './components/Paint.vue'
 
 export default {
   name: 'App',
   components: {
-    CanvasSelect
+    CanvasSelect,
+    Paint
+  },
+  data() {
+    return { 
+      canvasSelectVisible: false
+    }
   }
 }
 </script>
@@ -21,7 +29,12 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  padding-top: 60px;
+}
+
+body {
+  overflow: hidden;
+  background: burlywood;
+  margin: 0;
 }
 </style>
